@@ -6,7 +6,7 @@ const {createStore} = require('./redux');
 const {rewire} = require('redux-rewire-live')
 
 const reducer = (state, action)=>({
-  currentUser: 0,
+  currentUserID: 0,
   users: [
     {
       firstName: 'John',
@@ -25,7 +25,7 @@ const store = createStore(reducer)
 const currentUser = (state)=>({
   ...state
   currentUser: {
-    ...state.users[state.currentUser]
+    ...state.users[state.currentUserID]
   }
 })
 

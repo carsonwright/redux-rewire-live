@@ -1,7 +1,7 @@
 # redux-rewire-live
 
 ## Basic Use
-```
+```javascript
 const {createStore} = require('./redux');
 const {rewire} = require('redux-rewire-live')
 

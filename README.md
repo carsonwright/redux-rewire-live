@@ -1,7 +1,6 @@
 # redux-rewire-live
 
 ## Basic Use
-To use 
 ```
 const {createStore} = require('./redux');
 const {rewire} = require('redux-rewire-live')
@@ -23,17 +22,16 @@ const reducer = (state, action)=>({
 const store = createStore(reducer)
 
 
-const tweets = (state)=>({
+const currentUser = (state)=>({
   ...state
   currentUser: {
     ...state.users[state.currentUser]
   }
 })
 
+const rewiredStore = rewire(store, currentUser)
 
-rewire(store, tweets)
-
-store.getState().currentUser
+rewiredStore.getState().currentUser
 // {firstName: 'John', lastName: 'Doe'}
 ```
 

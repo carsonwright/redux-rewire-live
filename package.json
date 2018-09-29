@@ -1,0 +1,14 @@
+{
+  "name": "redux-rewire-live",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "devDependencies": {
+    "redux": "^4.0.0",
+    "assert": "^1.4.1",
+    "mocha": "^5.2.0"
+  }
+}
